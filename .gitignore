@@ -1,0 +1,26 @@
+# Node dependencies
+node_modules/
+
+# Environment files
+.env
+
+# Build output
+dist/
+coverage/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Ignore server workspace dependencies explicitly
+server/node_modules/
+server/.env
