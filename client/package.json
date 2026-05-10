@@ -1,0 +1,84 @@
+{
+  "name": "anime-store-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-grade Anime Store frontend using feature-driven modular Clean Architecture.",
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "validate:boundaries": "node scripts/validate-boundaries.js",
+    "validate:deps": "madge --circular --extensions ts,tsx src",
+    "update-docs": "node scripts/update-docs.js",
+    "maintain-docs": "npm run update-docs && npm run validate:boundaries",
+    "precommit:check": "npm run typecheck && npm run lint && npm run test -- --runInBand --passWithNoTests && npm run validate:deps && npm run validate:boundaries",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "latest",
+    "@reduxjs/toolkit": "latest",
+    "@tanstack/react-query": "latest",
+    "axios": "latest",
+    "clsx": "latest",
+    "framer-motion": "latest",
+    "lucide-react": "latest",
+    "next": "latest",
+    "next-themes": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-hook-form": "latest",
+    "react-redux": "latest",
+    "tailwind-merge": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@eslint/eslintrc": "latest",
+    "@storybook/nextjs": "10.3.6",
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "latest",
+    "@testing-library/user-event": "latest",
+    "@types/jest": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "^10.4.20",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "eslint-config-prettier": "latest",
+    "husky": "latest",
+    "jest": "latest",
+    "jest-environment-jsdom": "latest",
+    "lint-staged": "latest",
+    "madge": "latest",
+    "postcss": "^8.4.49",
+    "prettier": "latest",
+    "storybook": "10.3.6",
+    "tailwindcss": "^3.4.17",
+    "typescript": "latest"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css,scss}": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.0.0"
+  }
+}
