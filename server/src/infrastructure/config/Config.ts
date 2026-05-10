@@ -5,6 +5,7 @@ dotenv.config();
 export const config = {
   port: process.env.PORT || 3000,
   nodeEnv: process.env.NODE_ENV || 'development',
+  corsOrigin: process.env.CORS_ORIGIN || 'http://localhost:3001',
   mongoUri: process.env.MONGODB_URI || 'mongodb://localhost:27017/anime_store',
   redisUrl: process.env.REDIS_URL || 'redis://localhost:6379',
   jwtSecret: process.env.JWT_SECRET || 'default_secret',
