@@ -4,9 +4,9 @@
   "private": true,
   "description": "Production-grade Anime Store frontend using feature-driven modular Clean Architecture.",
   "scripts": {
-    "dev": "next dev -p 3001",
+    "dev": "next dev -p 5000",
     "build": "next build",
-    "start": "next start -p 3001",
+    "start": "next start -p 5000",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit",

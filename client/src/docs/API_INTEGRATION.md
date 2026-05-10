@@ -19,12 +19,12 @@ This matches the Express backend route mounting in `server/src/index.ts`:
 Use separate ports locally:
 
 - Backend: `http://localhost:3000`
-- Frontend: `http://localhost:3001`
+- Frontend: `http://localhost:5000`
 
 Set backend CORS for local frontend requests:
 
 ```env
-CORS_ORIGIN=http://localhost:3001
+CORS_ORIGIN=http://localhost:5000
 ```
 
 ## Route Map

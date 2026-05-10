@@ -35,7 +35,7 @@ cp .env.example .env.local
 npm run dev
 ```
 
-The frontend runs on `http://localhost:3001` so the backend can keep using `http://localhost:3000`.
+The frontend runs on `http://localhost:5000` so the backend can keep using `http://localhost:3000`.
 
 ## Main Scripts
 
@@ -62,7 +62,7 @@ npm run update-docs
 ## Backend Integration
 
 - API base URL: `NEXT_PUBLIC_API_BASE_URL=http://localhost:3000/api`
-- Backend CORS should allow `http://localhost:3001` during local development.
+- Backend CORS should allow `http://localhost:5000` during local development.
 - Route contract details live in `src/docs/API_INTEGRATION.md`.
 
 ## Documentation
