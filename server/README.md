@@ -36,7 +36,7 @@ This project follows Clean Architecture with strict separation of concerns:
 - **Framework**: Express.js
 - **Database**: MongoDB with Mongoose
 - **Authentication**: JWT (Access + Refresh tokens)
-- **Caching**: Redis
+- **Caching**: Redis planned for production scale only
 - **Validation**: Joi
 - **DI Container**: Inversify
 - **Testing**: Jest
@@ -50,7 +50,7 @@ This project follows Clean Architecture with strict separation of concerns:
 
 - Node.js 18+
 - MongoDB
-- Redis
+- Redis is optional and currently disabled for local/dev
 - npm or yarn
 
 ### Installation
@@ -72,7 +72,7 @@ cp .env.example .env
 # Edit .env with your configuration
 ```
 
-4. Start MongoDB and Redis services
+4. Start MongoDB
 
 5. Run the application
 ```bash
@@ -109,7 +109,7 @@ src/
 │   └── dtos/             # Data transfer objects
 ├── infrastructure/        # External concerns
 │   ├── database/         # Database implementations
-│   ├── cache/            # Redis implementations
+│   ├── cache/            # Future production cache implementations
 │   ├── external-services/# External APIs
 │   └── config/           # Configuration
 ├── presentation/          # Delivery mechanisms
