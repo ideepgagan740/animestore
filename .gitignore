@@ -3,6 +3,9 @@ node_modules/
 
 # Environment files
 .env
+.env.*
+!.env.example
+!.env.*.example
 
 # Build output
 dist/
@@ -24,3 +27,4 @@ Thumbs.db
 # Ignore server workspace dependencies explicitly
 server/node_modules/
 server/.env
+client/.env
