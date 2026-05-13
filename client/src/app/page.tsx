@@ -5,7 +5,7 @@ import { MainLayout } from '@layouts/MainLayout';
 export default function HomePage() {
   return (
     <MainLayout>
-      <div className="grid gap-8 lg:grid-cols-[1fr_360px]">
+      <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
         <ProductListingPage />
         <CartSummary />
       </div>
